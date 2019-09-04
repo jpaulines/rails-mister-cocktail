@@ -12,6 +12,13 @@
   </head>
 
   <body>
+    <div class="border-bottom">
+      <div class="d-flex justify-content-between align-items-center my-3">
+        <p class="links"><%=link_to "Cocktail Menu", cocktails_path %></p>
+        <a class="btn btn-outline-primary my-2 my-sm-0 ml-2" href="/cocktails/new">
+          Add Cocktail</a>
+      </div>
+    </div>
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->

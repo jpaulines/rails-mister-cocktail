@@ -30,3 +30,8 @@ puts "Created a list of ingredients"
 # check along the way before add create with rails db:seed
 # do rails db:seed to create the database
 # check in rails console: Ingredient.all.size
+
+puts "Creating your cocktail database"
+Cocktail.destroy_all
+Cocktail.create(name: "Mojito")
+puts "Created a Mojito"
