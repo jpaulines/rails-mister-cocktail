@@ -20,6 +20,7 @@ ingredients = JSON.parse(ingredient_string)
 # check what is in the API p ingredients["drinks"].size
 
 puts "Creating your ingredient database"
+Dose.destroy_all
 Ingredient.destroy_all
 puts "Cleaning the database first"
 ingredients["drinks"].each do |ingredient|

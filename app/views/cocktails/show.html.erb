@@ -9,12 +9,25 @@
   <%= link_to "🗑", dose_path, method: :delete, data: {confirm: "Are you sure?"} %>
 <% end %>
 
+<% @cocktail.reviews.each do |review| %>
+ <%= review.content %>
+ <%= review.rating %>
+ <%= link_to "🗑", review_path, method: :delete, data: {confirm: "Are you sure?"} %>
+<% end %>
+
 <p>Add an ingredient to <%= @cocktail.name %> </p>
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
-  <%= f.association :ingredient %>
+  <%= f.association :ingredient, input_html: { class: 'select2' } %>
   <%= f.submit "Add a dose", class: "btn btn-primary" %>
 <% end %>
 
 
 <%= link_to "Back to overview", cocktails_path %>
+
+<p>Add a Review to <%= @cocktail.name %> </p>
+<%= simple_form_for [@cocktail, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+  <%= f.submit "Add a review", class: "btn btn-primary" %>
+<% end %>
