@@ -32,9 +32,9 @@ puts "Created a list of ingredients"
 # do rails db:seed to create the database
 # check in rails console: Ingredient.all.size
 
-puts "Creating your cocktail database"
-Cocktail.destroy_all
-Cocktail.create(name: "Mojito")
-puts "Created a Mojito"
+# puts "Creating your cocktail database"
+# Cocktail.destroy_all
+# Cocktail.create(name: "Mojito")
+# puts "Created a Mojito"
 
 
