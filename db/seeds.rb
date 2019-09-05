@@ -36,3 +36,5 @@ puts "Creating your cocktail database"
 Cocktail.destroy_all
 Cocktail.create(name: "Mojito")
 puts "Created a Mojito"
+
+

@@ -7,11 +7,11 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @cocktail = Cocktail.find(params[:cocktail_id])
     @review.cocktail = @cocktail
-    if @review.save
-      redirect_to cocktail_path(@review.cocktail)
-    else
-      render :new
-    end
+    @review.save
+    redirect_to cocktail_path(@review.cocktail)
+    # else
+    #   render :template => 'cocktails/show'
+    # end
   end
 
   def destroy
